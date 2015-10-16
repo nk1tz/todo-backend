@@ -1,0 +1,36 @@
+{
+  "name": "TodoList",
+  "plural": "TodoLists",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "createdOn": {
+      "type": "date",
+      "required": true
+    },
+    "user": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "todos": {
+      "type": "hasMany",
+      "model": "Todo",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
